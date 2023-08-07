@@ -81,7 +81,7 @@ export const getSingleCategoryController = async (req, res) => {
     try {
         const category = await categoryModel.findOne({
             slug: req.params.slug
-        });
+        }).populate('notes')
 
         res.status(200).send({
             success: true,
