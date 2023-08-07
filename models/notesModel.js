@@ -10,7 +10,7 @@ const notesSchema = new mongoose.Schema({
         required: true,
       },
       category: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: 'category',
         required: true,
       },
@@ -20,4 +20,4 @@ const notesSchema = new mongoose.Schema({
     }],
 }, { timestamps: true })
 
-export default mongoose.model('category', notesSchema)
+export default mongoose.model('notes', notesSchema)
