@@ -82,6 +82,29 @@ export const updatingNotesController = async (req, res) => {
         });
     }
 }
+// get all notes
+export const getAllNoteController = async (req, res) => {
+    try {
+        const notes = await notesModel
+            .find({})
+            .populate('category')
+            .populate('users')
+            .sort({ createdAt: -1 });
+        res.send({
+            success: true,
+            totalCount: notes.length,
+            message: 'All Notes',
+            notes
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            message: 'Error in getting notes',
+            error
+        })
+    }
+}
 
 //get single note 
 export const getSingleNoteController = async (req, res) => {

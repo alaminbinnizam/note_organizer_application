@@ -119,3 +119,21 @@ export const deleteCategoryController = async (req, res) => {
         })
     }
 }
+//all category
+export const getAllCategoryController = async (req, res) => {
+    try {
+        const category = await categoryModel.find({}).populate('notes');
+        res.status(200).send({
+            success: true,
+            message: 'All Categories list',
+            category
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            message: 'Error in categories',
+            error
+        })
+    }
+}

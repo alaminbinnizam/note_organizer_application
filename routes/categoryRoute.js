@@ -2,6 +2,7 @@ import express from 'express';
 import {
     createCategoryController,
     deleteCategoryController,
+    getAllCategoryController,
     getSingleCategoryController,
     updateCategoryController
 } from '../controllers/categoryController.js';
@@ -14,8 +15,8 @@ const router = express.Router()
 router.post('/create-category', requireSignIn, createCategoryController);
 //updating category
 router.put('/update-category/:id', requireSignIn, updateCategoryController);
-// //get all category
-// router.get('/getall-category',requireSignIn, getAllCategoryController);
+//get all category
+router.get('/getall-category',requireSignIn, getAllCategoryController);
 //get single category
 router.get('/getsingle-category/:slug', requireSignIn, getSingleCategoryController)
 //get single category

@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from './Components/Home';
+import Home from './User/Home';
 import About from './Components/About';
 import ForgotPassword from './Components/ForgotPassword';
 import PrivacyPolicy from './Components/PrivacyPolicy';
@@ -7,6 +7,12 @@ import Contact from './Components/Contact';
 import Pagenotefound from './Components/Pagenotefound';
 import Login from './Components/Login';
 import Signup from './Components/Signup'
+import PrivateRoute from './Routes/Private';
+import Notes from './User/Notes';
+import Profile from './User/Profile';
+import CreateNote from './User/CreateNote';
+import CreateCategory from './User/CreateCategory';
+
 
 function App() {
   return (
@@ -22,19 +28,12 @@ function App() {
         <Route path='/*' element={<Pagenotefound />} />
 
         {/* user protected route */}
-        {/* <Route path='/user' element={<PrivateRoute />}>
-          <Route path='employees' element={<Employees />} />
-          <Route path='employee/:id' element={<SingleEmployee />} />
-          <Route path='deviceLogs' element={<DeviceLogs />} />
-          <Route path='devices' element={<Devices />} />
-          <Route path='deviceReturn' element={<DeviceReturn />} />
-          <Route path='deviceTransfer' element={<DeviceTransfer />} />
-          <Route path='profile' element={<Profile />} />
+         <Route path='/user' element={<PrivateRoute />}>
           <Route path='create-category' element={<CreateCategory />} />
-          <Route path='create-device' element={<CreateDevice />} />
-          <Route path='create-employees' element={<CreateEmployees />} />
+          <Route path='create-note' element={<CreateNote />} />
+          <Route path='notes' element={<Notes />} />
         </Route>
-       */}
+       
 
 
 

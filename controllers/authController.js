@@ -117,3 +117,23 @@ export const loginController = async (req, res) => {
         });
     }
 };
+
+export const mainProvider = async (req, res)=>{
+    try {
+        const {id}= await req.params;
+        const main = await userModel.findById(id).populate('category')
+        .populate('notes');
+        res.status(201).send({
+            success: true,
+            message: 'Main Endpoint Fetched Successfully',
+            main
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            message: 'Error in Main Provider',
+            error
+        })
+    }
+}
