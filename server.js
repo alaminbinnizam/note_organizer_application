@@ -6,7 +6,7 @@ import cors from 'cors'
 import authRoute from './routes/authRoute.js'
 import categoryRoute from './routes/categoryRoute.js'
 import noteRoute from './routes/noteRoute.js'
-import path, { Path } from "path";
+import path from 'path';
 import { fileURLToPath } from "url";
 
 //rest object
