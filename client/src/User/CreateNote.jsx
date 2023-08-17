@@ -98,7 +98,7 @@ const CreateNote = () => {
                                 }} />
                             </div>
                             <div className="mb-3">
-                                <button className='btn btn-primary' onClick={handleCreate}>Create Device</button>
+                                <button className='btn btn-primary' onClick={handleCreate}>Create Blog</button>
                             </div>
                         </div>
                     </div>

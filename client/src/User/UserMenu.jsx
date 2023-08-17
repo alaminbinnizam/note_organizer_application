@@ -8,7 +8,7 @@ const UserMenu = () => {
                 <div className="list-group">
                     <h4>Main Menu</h4>
                     <NavLink to="/user/create-category" className="list-group-item list-group-item-action">Create Category</NavLink>
-                    <NavLink to="/user/create-note" className="list-group-item list-group-item-action">Create Note</NavLink>
+                    <NavLink to="/user/create-note" className="list-group-item list-group-item-action">Create Blog</NavLink>
                 </div>
             </div>
     </>

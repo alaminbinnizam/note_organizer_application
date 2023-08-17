@@ -9,9 +9,9 @@ import Login from './Components/Login';
 import Signup from './Components/Signup'
 import PrivateRoute from './Routes/Private';
 import Notes from './User/Notes';
-import Profile from './User/Profile';
 import CreateNote from './User/CreateNote';
 import CreateCategory from './User/CreateCategory';
+import UpdateNote from './User/UpdateNote';
 
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
           <Route path='create-category' element={<CreateCategory />} />
           <Route path='create-note' element={<CreateNote />} />
           <Route path='notes' element={<Notes />} />
+          <Route path='update-note/:id' element={<UpdateNote />} />
         </Route>
        
 
